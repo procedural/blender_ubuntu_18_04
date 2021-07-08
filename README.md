@@ -1,4 +1,8 @@
 ```
+$ gcc --version
+gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+```
+```
 $ clang --version
 clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
 Target: x86_64-pc-linux-gnu
