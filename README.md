@@ -252,3 +252,14 @@ index 7cd21b2..d589d8f 100755
  
  TBB_SOURCE=( "https://github.com/oneapi-src/oneTBB/archive/$TBB_VERSION$TBB_VERSION_UPDATE.tar.gz" )
 ```
+```
+Unpacking OpenColorIO-2.0.0
+CMake Error at CMakeLists.txt:8 (cmake_minimum_required):
+  CMake 3.12 or higher is required.  You are running version 3.10.2
+
+
+-- Configuring incomplete, errors occurred!
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'clean'.  Stop.
+ERROR! OpenColorIO-2.0.0 failed to compile, exiting
+```
