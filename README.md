@@ -214,3 +214,16 @@ https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu#Automatic_Dependency
 cd ~/blender-git
 ./blender/build_files/build_environment/install_deps.sh
 ```
+```
+Forced Boost building, as requested...
+Building Boost-1.73.0
+Ensuring /opt/lib exists and is writable by us
+Downloading Boost-1.73.0
+--2021-07-09 00:57:45--  https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2
+Resolving dl.bintray.com (dl.bintray.com)... 3.124.176.138, 35.157.24.53
+Connecting to dl.bintray.com (dl.bintray.com)|3.124.176.138|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2021-07-09 00:57:45 ERROR 403: Forbidden.
+
+ERROR! wget could not find https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2, or could not write it to /home/constantine/src/blender-deps/boost-1.73.0.tar.bz2, exiting
+```
