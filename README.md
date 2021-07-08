@@ -210,3 +210,7 @@ GNUmakefile:340: recipe for target 'all' failed
 make: *** [all] Error 2
 ```
 https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu#Automatic_Dependency_Installation
+```
+cd ~/blender-git
+./blender/build_files/build_environment/install_deps.sh
+```
