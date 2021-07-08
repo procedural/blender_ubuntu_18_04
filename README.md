@@ -266,3 +266,25 @@ ERROR! OpenColorIO-2.0.0 failed to compile, exiting
 https://packages.ubuntu.com/focal/amd64/cmake/download
 
 https://mirrors.kernel.org/ubuntu/pool/main/c/cmake/cmake_3.16.3-1ubuntu1_amd64.deb
+```
+$ sudo dpkg -i cmake_3.16.3-1ubuntu1_amd64.deb 
+Selecting previously unselected package cmake.
+(Reading database ... 176089 files and directories currently installed.)
+Preparing to unpack cmake_3.16.3-1ubuntu1_amd64.deb ...
+Unpacking cmake (3.16.3-1ubuntu1) ...
+dpkg: dependency problems prevent configuration of cmake:
+ cmake depends on cmake-data (= 3.16.3-1ubuntu1); however:
+  Version of cmake-data on system is 3.10.2-1ubuntu2.18.04.1.
+ cmake depends on libarchive13 (>= 3.3.3); however:
+  Version of libarchive13:amd64 on system is 3.2.2-3.1ubuntu0.6.
+ cmake depends on libgcc-s1 (>= 3.0); however:
+  Package libgcc-s1 is not installed.
+ cmake depends on libstdc++6 (>= 9); however:
+  Version of libstdc++6:amd64 on system is 8.4.0-1ubuntu1~18.04.
+
+dpkg: error processing package cmake (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Errors were encountered while processing:
+ cmake
+```
