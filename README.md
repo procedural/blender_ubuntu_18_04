@@ -227,3 +227,9 @@ HTTP request sent, awaiting response... 403 Forbidden
 
 ERROR! wget could not find https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2, or could not write it to /home/constantine/src/blender-deps/boost-1.73.0.tar.bz2, exiting
 ```
+https://www.boost.org/users/history/version_1_73_0.html
+```
+rm /home/constantine/src/blender-deps/boost-1.73.0.tar.bz2 
+wget https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.bz2
+mv boost_1_73_0.tar.bz2 /home/constantine/src/blender-deps/
+```
