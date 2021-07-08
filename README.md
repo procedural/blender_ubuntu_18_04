@@ -209,3 +209,4 @@ make[1]: *** [all] Error 2
 GNUmakefile:340: recipe for target 'all' failed
 make: *** [all] Error 2
 ```
+https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu#Automatic_Dependency_Installation
