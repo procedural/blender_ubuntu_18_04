@@ -265,4 +265,4 @@ ERROR! OpenColorIO-2.0.0 failed to compile, exiting
 ```
 https://packages.ubuntu.com/focal/amd64/cmake/download
 
-mirrors.kernel.org/ubuntu/pool/main/c/cmake/cmake_3.16.3-1ubuntu1_amd64.deb
+https://mirrors.kernel.org/ubuntu/pool/main/c/cmake/cmake_3.16.3-1ubuntu1_amd64.deb
