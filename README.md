@@ -11,6 +11,8 @@ Target: x86_64-pc-linux-gnu
 Thread model: posix
 InstalledDir: /usr/bin
 ```
+https://github.com/procedural/blender/releases/tag/blender-v2.93-release-08-july-2021
+
 https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu
 ```
 [100%] Linking CXX executable ../../bin/blender
