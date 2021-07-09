@@ -293,3 +293,63 @@ Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
 Errors were encountered while processing:
  cmake
 ```
+```
+[ 34%] Building CXX object src/OpenColorIO/CMakeFiles/OpenColorIO.dir/OCIOYaml.cpp.o
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, bool&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:46:36: error: 'const class YAML::Node' has no member named 'Mark'
+          os << "At line " << (node.Mark().line + 1)
+                                    ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, int&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:62:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, float&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:78:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, double&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:94:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, std::__cxx11::string&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:110:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, StringUtils::StringVec&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:126:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, std::vector<float>&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:142:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::load(const YAML::Node&, std::vector<double>&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:158:35: error: 'const class YAML::Node' has no member named 'Mark'
+         os << "At line " << (node.Mark().line + 1)
+                                   ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::LogUnknownKeyWarning(const YAML::Node&, const YAML::Node&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:272:30: error: 'const class YAML::Node' has no member named 'Mark'
+     os << "At line " << (key.Mark().line + 1)
+                              ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::throwError(const YAML::Node&, const string&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:293:31: error: 'const class YAML::Node' has no member named 'Mark'
+     os << "At line " << (node.Mark().line + 1)
+                               ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::throwValueError(const string&, const YAML::Node&, const string&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:308:30: error: 'const class YAML::Node' has no member named 'Mark'
+     os << "At line " << (key.Mark().line + 1)
+                              ^~~~
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp: In function 'void OpenColorIO_v2_0::{anonymous}::throwValueError(const YAML::Node&, const string&)':
+/home/constantine/src/blender-deps/OpenColorIO-2.0.0/src/OpenColorIO/OCIOYaml.cpp:322:30: error: 'const class YAML::Node' has no member named 'Mark'
+     os << "At line " << (key.Mark().line + 1)
+                              ^~~~
+[ 34%] Building CXX object src/OpenColorIO/CMakeFiles/OpenColorIO.dir/Op.cpp.o
+src/OpenColorIO/CMakeFiles/OpenColorIO.dir/build.make:1027: recipe for target 'src/OpenColorIO/CMakeFiles/OpenColorIO.dir/OCIOYaml.cpp.o' failed
+make[2]: *** [src/OpenColorIO/CMakeFiles/OpenColorIO.dir/OCIOYaml.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+CMakeFiles/Makefile2:482: recipe for target 'src/OpenColorIO/CMakeFiles/OpenColorIO.dir/all' failed
+make[1]: *** [src/OpenColorIO/CMakeFiles/OpenColorIO.dir/all] Error 2
+Makefile:145: recipe for target 'all' failed
+make: *** [all] Error 2
+ERROR! OpenColorIO-2.0.0 failed to compile, exiting
+```
