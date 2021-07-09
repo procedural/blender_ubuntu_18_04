@@ -1,5 +1,10 @@
 Blender v2.93.2 compiled on Ubuntu 18.04 x64 (without SSGI): https://github.com/procedural/blender_ubuntu_18_04/releases/tag/blender-v2.93-release-03d5c8b
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+![](https://github.com/procedural/blender_ubuntu_18_04/raw/main/ssgi/blender-ssgi-ubuntu1804.png)
+
+https://blenderartists.org/t/screen-space-global-illumination-for-eevee/1248355/409
+
 ```
 $ gcc --version
 gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
