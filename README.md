@@ -1,4 +1,4 @@
-Blender v2.93.2 compiled on Ubuntu 18.04 (x64): https://github.com/procedural/blender_ubuntu_18_04/releases/tag/blender-v2.93-release-03d5c8b
+Blender v2.93.2 compiled on Ubuntu 18.04 x64 (without SSGI): https://github.com/procedural/blender_ubuntu_18_04/releases/tag/blender-v2.93-release-03d5c8b
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ```
 $ gcc --version
