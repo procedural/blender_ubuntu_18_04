@@ -1,0 +1,44 @@
+diff --git a/source/blender/draw/engines/eevee/eevee_shaders.c b/source/blender/draw/engines/eevee/eevee_shaders.c
+index 6d400df..10e8ce2 100644
+--- a/source/blender/draw/engines/eevee/eevee_shaders.c
++++ b/source/blender/draw/engines/eevee/eevee_shaders.c
+@@ -803,10 +803,9 @@ struct GPUShader *EEVEE_shaders_effect_ssgi_resolve_sh_get(void)
+ struct GPUShader *EEVEE_shaders_effect_ssgi_filter_sh_get(void)
+ {
+   if (e_data.ssgi_filter == NULL) {
+-    e_data.ssgi_filter = DRW_shader_create_fullscreen_with_shaderlib(
++    e_data.ssgi_filter = DRW_shader_create_fullscreen(
+         datatoc_effect_ssgi_filter_frag_glsl,
+-        e_data.lib,
+-        SHADER_DEFINES "#define STEP_FILTER\n");
++        "#define STEP_FILTER\n");
+   }
+   return e_data.ssgi_filter;
+ }
+diff --git a/source/blender/draw/engines/eevee/shaders/effect_ssgi_filter_frag.glsl b/source/blender/draw/engines/eevee/shaders/effect_ssgi_filter_frag.glsl
+index 497557b..8fcd4a4 100644
+--- a/source/blender/draw/engines/eevee/shaders/effect_ssgi_filter_frag.glsl
++++ b/source/blender/draw/engines/eevee/shaders/effect_ssgi_filter_frag.glsl
+@@ -1,13 +1,13 @@
+ 
+-#pragma BLENDER_REQUIRE(common_math_lib.glsl)
+-#pragma BLENDER_REQUIRE(common_math_geom_lib.glsl)
+-#pragma BLENDER_REQUIRE(closure_eval_glossy_lib.glsl) //
+-#pragma BLENDER_REQUIRE(closure_eval_lib.glsl) //
+-#pragma BLENDER_REQUIRE(lightprobe_lib.glsl) //
+-#pragma BLENDER_REQUIRE(bsdf_common_lib.glsl) //
+-#pragma BLENDER_REQUIRE(surface_lib.glsl) //
+-#pragma BLENDER_REQUIRE(effect_reflection_lib.glsl) //
+-#pragma BLENDER_REQUIRE(common_colorpacking_lib.glsl)
++//#pragma BLENDER_REQUIRE(common_math_lib.glsl)
++//#pragma BLENDER_REQUIRE(common_math_geom_lib.glsl)
++//#pragma BLENDER_REQUIRE(closure_eval_glossy_lib.glsl) //
++//#pragma BLENDER_REQUIRE(closure_eval_lib.glsl) //
++//#pragma BLENDER_REQUIRE(lightprobe_lib.glsl) //
++//#pragma BLENDER_REQUIRE(bsdf_common_lib.glsl) //
++//#pragma BLENDER_REQUIRE(surface_lib.glsl) //
++//#pragma BLENDER_REQUIRE(effect_reflection_lib.glsl) //
++//#pragma BLENDER_REQUIRE(common_colorpacking_lib.glsl)
+ 
+ /* SSGI Bilateral filtering */
+ /* TODO */

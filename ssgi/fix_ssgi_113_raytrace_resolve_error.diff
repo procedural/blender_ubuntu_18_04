@@ -1,0 +1,18 @@
+diff --git a/source/blender/draw/engines/eevee/shaders/effect_ssgi_resolve_frag.glsl b/source/blender/draw/engines/eevee/shaders/effect_ssgi_resolve_frag.glsl
+index 6902aa3..c587b89 100644
+--- a/source/blender/draw/engines/eevee/shaders/effect_ssgi_resolve_frag.glsl
++++ b/source/blender/draw/engines/eevee/shaders/effect_ssgi_resolve_frag.glsl
+@@ -100,6 +100,13 @@ void resolve_reflection_sample(vec2 sample_uv,
+   weight_accum += weight;
+ }
+ 
++void raytrace_resolve(ClosureInputGlossy cl_in,
++                      inout ClosureEvalGlossy cl_eval,
++                      inout ClosureEvalCommon cl_common,
++                      inout ClosureOutputGlossy cl_out)
++{
++}
++
+ vec4 raytrace_resolve_diffuse(vec4 difcol_roughness, vec3 viewPosition, vec3 worldPosition, vec3 worldNormal, out vec4 ssgi_resolve)
+ {
+   float roughness = 1.0;
