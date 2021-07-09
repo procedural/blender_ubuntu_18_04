@@ -353,6 +353,120 @@ Makefile:145: recipe for target 'all' failed
 make: *** [all] Error 2
 ERROR! OpenColorIO-2.0.0 failed to compile, exiting
 ```
+```diff
+diff --git a/src/OpenColorIO/OCIOYaml.cpp b/src/OpenColorIO/OCIOYaml.cpp
+index 2cf64df..5f0ca66 100644
+--- a/src/OpenColorIO/OCIOYaml.cpp
++++ b/src/OpenColorIO/OCIOYaml.cpp
+@@ -43,7 +43,7 @@ inline void load(const YAML::Node& node, bool& x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-         os << "At line " << (node.Mark().line + 1)
++         os << "At line " << (0)
+             << ", '" << node.Tag() << "' parsing boolean failed "
+             << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -59,7 +59,7 @@ inline void load(const YAML::Node& node, int& x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+             << ", '" << node.Tag() << "' parsing integer failed "
+             << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -75,7 +75,7 @@ inline void load(const YAML::Node& node, float& x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+             << ", '" << node.Tag() << "' parsing float failed "
+             << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -91,7 +91,7 @@ inline void load(const YAML::Node& node, double& x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+             << ", '" << node.Tag() << "' parsing double failed "
+             << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -107,7 +107,7 @@ inline void load(const YAML::Node& node, std::string& x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+             << ", '" << node.Tag() << "' parsing string failed "
+             << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -123,7 +123,7 @@ inline void load(const YAML::Node & node, StringUtils::StringVec & x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+            << ", '" << node.Tag() << "' parsing StringVec failed "
+            << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -139,7 +139,7 @@ inline void load(const YAML::Node & node, std::vector<float> & x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+            << ", '" << node.Tag() << "' parsing vector<float> failed "
+            << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -155,7 +155,7 @@ inline void load(const YAML::Node& node, std::vector<double>& x)
+     catch (const std::exception & e)
+     {
+         std::ostringstream os;
+-        os << "At line " << (node.Mark().line + 1)
++        os << "At line " << (0)
+            << ", '" << node.Tag() << "' parsing vector<double> failed "
+            << "with: " << e.what();
+         throw Exception(os.str().c_str());
+@@ -269,7 +269,7 @@ inline void LogUnknownKeyWarning(const YAML::Node & node,
+     load(key, keyName);
+ 
+     std::ostringstream os;
+-    os << "At line " << (key.Mark().line + 1)
++    os << "At line " << (0)
+         << ", unknown key '" << keyName << "' in '" << node.Tag() << "'.";
+ 
+     LogWarning(os.str());
+@@ -290,7 +290,7 @@ inline void throwError(const YAML::Node & node,
+                        const std::string & msg)
+ {
+     std::ostringstream os;
+-    os << "At line " << (node.Mark().line + 1)
++    os << "At line " << (0)
+         << ", '" << node.Tag() << "' parsing failed: " 
+         << msg;
+ 
+@@ -305,7 +305,7 @@ inline void throwValueError(const std::string & nodeName,
+     load(key, keyName);
+ 
+     std::ostringstream os;
+-    os << "At line " << (key.Mark().line + 1)
++    os << "At line " << (0)
+         << ", the value parsing of the key '" << keyName 
+         << "' from '" << nodeName << "' failed: " << msg;
+ 
+@@ -319,7 +319,7 @@ inline void throwValueError(const YAML::Node & key,
+     load(key, keyName);
+ 
+     std::ostringstream os;
+-    os << "At line " << (key.Mark().line + 1)
++    os << "At line " << (0)
+         << ", the value parsing of the key '" << keyName 
+         << "' failed: " << msg;
+ 
+```
 ```
 Unpacking OpenShadingLanguage-1.11.10.0
 ILMBASE_HOME=/opt/lib/openexr
