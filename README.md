@@ -540,3 +540,21 @@ ERROR! OpenShadingLanguage-1.11.10.0 failed to compile, exiting
 sudo apt install llvm-7-dev
 LLVM_ROOT=/usr/lib/llvm-7 ./blender/build_files/build_environment/install_deps.sh
 ```
+```
+[ 14%] Building CXX object src/liboslcomp/CMakeFiles/oslcomp.dir/oslcomp.cpp.o
+/home/constantine/src/blender-deps/OpenShadingLanguage-1.11.10.0/src/liboslcomp/oslcomp.cpp:24:10: fatal error: clang/Basic/TargetInfo.h: No such file or directory
+ #include <clang/Basic/TargetInfo.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+src/liboslcomp/CMakeFiles/oslcomp.dir/build.make:117: recipe for target 'src/liboslcomp/CMakeFiles/oslcomp.dir/oslcomp.cpp.o' failed
+make[2]: *** [src/liboslcomp/CMakeFiles/oslcomp.dir/oslcomp.cpp.o] Error 1
+CMakeFiles/Makefile2:296: recipe for target 'src/liboslcomp/CMakeFiles/oslcomp.dir/all' failed
+make[1]: *** [src/liboslcomp/CMakeFiles/oslcomp.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 15%] Building CXX object src/liboslquery/CMakeFiles/oslquery.dir/osolex.cpp.o
+[ 16%] Linking CXX shared library ../../lib/liboslquery.so
+[ 16%] Built target oslquery
+Makefile:155: recipe for target 'all' failed
+make: *** [all] Error 2
+ERROR! OpenShadingLanguage-1.11.10.0 failed to compile, exiting
+```
