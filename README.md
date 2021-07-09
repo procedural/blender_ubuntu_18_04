@@ -562,3 +562,20 @@ sudo apt install libclang-7-dev
 ```
 cp -Lr /opt/lib/ .
 ```
+```
+CMake Error at /usr/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Could NOT find Embree (missing: _embree_LIBRARIES EMBREE_INCLUDE_DIR)
+  (Required is at least version "3.8.0")
+Call Stack (most recent call first):
+  /usr/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+  build_files/cmake/Modules/FindEmbree.cmake:82 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  build_files/cmake/platform/platform_unix.cmake:406 (find_package)
+  CMakeLists.txt:934 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/tmp/blender-git/build_linux/CMakeFiles/CMakeOutput.log".
+See also "/tmp/blender-git/build_linux/CMakeFiles/CMakeError.log".
+GNUmakefile:340: recipe for target 'all' failed
+make: *** [all] Error 1
+```
