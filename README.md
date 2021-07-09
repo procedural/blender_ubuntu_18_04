@@ -536,3 +536,7 @@ make: *** No targets specified and no makefile found.  Stop.
 make: *** No rule to make target 'clean'.  Stop.
 ERROR! OpenShadingLanguage-1.11.10.0 failed to compile, exiting
 ```
+```
+sudo apt install llvm-7-dev
+LLVM_ROOT=/usr/lib/llvm-7 ./blender/build_files/build_environment/install_deps.sh
+```
