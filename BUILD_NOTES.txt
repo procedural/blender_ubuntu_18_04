@@ -1,0 +1,43 @@
+
+
+Ran with:
+    install_deps.sh 
+
+
+If you're using CMake add this to your configuration flags:
+  -D WITH_CODEC_SNDFILE=ON
+  -D PYTHON_VERSION=3.9
+  -D PYTHON_ROOT_DIR=/opt/lib/python-3.9
+  -D BOOST_ROOT=/opt/lib/boost
+  -D Boost_NO_SYSTEM_PATHS=ON
+  -D Boost_NO_BOOST_CMAKE=ON
+  -D TBB_ROOT_DIR=/opt/lib/tbb
+  -D WITH_OPENCOLORIO=ON
+  -D OPENCOLORIO_ROOT_DIR=/opt/lib/ocio
+  -D OPENEXR_ROOT_DIR=/opt/lib/openexr
+  -D WITH_OPENIMAGEIO=ON
+  -D OPENIMAGEIO_ROOT_DIR=/opt/lib/oiio
+  -D WITH_CYCLES_OSL=ON
+  -D WITH_LLVM=ON
+  -D LLVM_VERSION=6.0.0
+  -D OSL_ROOT_DIR=/opt/lib/osl
+  -D WITH_OPENSUBDIV=ON
+  -D OPENSUBDIV_ROOT_DIR=/opt/lib/osd
+  -D WITH_OPENVDB=ON
+  -D WITH_OPENVDB_BLOSC=ON
+  -D OPENVDB_ROOT_DIR=/opt/lib/openvdb
+  -D BLOSC_ROOT_DIR=/opt/lib/blosc
+  -D WITH_ALEMBIC=ON
+  -D ALEMBIC_ROOT_DIR=/opt/lib/alembic
+  -D WITH_USD=ON
+  -D USD_ROOT_DIR=/opt/lib/usd
+  -D WITH_CODEC_FFMPEG=ON
+  -D FFMPEG_LIBRARIES='avformat;avcodec;avutil;avdevice;swscale;swresample;lzma;rt;theora;theoradec;theoraenc;vorbis;vorbisenc;vorbisfile;ogg;x264;openjp2'
+  -D WITH_XR_OPENXR=ON
+  -D XR_OPENXR_SDK_ROOT_DIR=/opt/lib/xr-openxr-sdk
+
+Or even simpler, just run (in your blender-source dir):
+  make -j2 BUILD_CMAKE_ARGS="-U *SNDFILE* -U PYTHON* -U *BOOST* -U *Boost* -U *TBB* -U *OPENCOLORIO* -U *OPENEXR* -U *OPENIMAGEIO* -U *LLVM* -U *CYCLES* -U *OPENSUBDIV* -U *OPENVDB*  -U *BLOSC* -U *COLLADA* -U *FFMPEG* -U *ALEMBIC* -U *USD* -U *EMBREE* -U *OPENIMAGEDENOISE* -U *OPENXR* -D WITH_CODEC_SNDFILE=ON -D PYTHON_VERSION=3.9 -D PYTHON_ROOT_DIR=/opt/lib/python-3.9 -D BOOST_ROOT=/opt/lib/boost -D Boost_NO_SYSTEM_PATHS=ON -D Boost_NO_BOOST_CMAKE=ON -D TBB_ROOT_DIR=/opt/lib/tbb -D WITH_OPENCOLORIO=ON -D OPENCOLORIO_ROOT_DIR=/opt/lib/ocio -D OPENEXR_ROOT_DIR=/opt/lib/openexr -D WITH_OPENIMAGEIO=ON -D OPENIMAGEIO_ROOT_DIR=/opt/lib/oiio -D WITH_CYCLES_OSL=ON -D WITH_LLVM=ON -D LLVM_VERSION=6.0.0 -D OSL_ROOT_DIR=/opt/lib/osl -D WITH_OPENSUBDIV=ON -D OPENSUBDIV_ROOT_DIR=/opt/lib/osd -D WITH_OPENVDB=ON -D WITH_OPENVDB_BLOSC=ON -D OPENVDB_ROOT_DIR=/opt/lib/openvdb -D BLOSC_ROOT_DIR=/opt/lib/blosc -D WITH_ALEMBIC=ON -D ALEMBIC_ROOT_DIR=/opt/lib/alembic -D WITH_USD=ON -D USD_ROOT_DIR=/opt/lib/usd -D WITH_CODEC_FFMPEG=ON -D FFMPEG_LIBRARIES='avformat;avcodec;avutil;avdevice;swscale;swresample;lzma;rt;theora;theoradec;theoraenc;vorbis;vorbisenc;vorbisfile;ogg;x264;openjp2' -D WITH_XR_OPENXR=ON -D XR_OPENXR_SDK_ROOT_DIR=/opt/lib/xr-openxr-sdk"
+
+Or in all your build directories:
+  cmake -U *SNDFILE* -U PYTHON* -U *BOOST* -U *Boost* -U *TBB* -U *OPENCOLORIO* -U *OPENEXR* -U *OPENIMAGEIO* -U *LLVM* -U *CYCLES* -U *OPENSUBDIV* -U *OPENVDB*  -U *BLOSC* -U *COLLADA* -U *FFMPEG* -U *ALEMBIC* -U *USD* -U *EMBREE* -U *OPENIMAGEDENOISE* -U *OPENXR* -D WITH_CODEC_SNDFILE=ON -D PYTHON_VERSION=3.9 -D PYTHON_ROOT_DIR=/opt/lib/python-3.9 -D BOOST_ROOT=/opt/lib/boost -D Boost_NO_SYSTEM_PATHS=ON -D Boost_NO_BOOST_CMAKE=ON -D TBB_ROOT_DIR=/opt/lib/tbb -D WITH_OPENCOLORIO=ON -D OPENCOLORIO_ROOT_DIR=/opt/lib/ocio -D OPENEXR_ROOT_DIR=/opt/lib/openexr -D WITH_OPENIMAGEIO=ON -D OPENIMAGEIO_ROOT_DIR=/opt/lib/oiio -D WITH_CYCLES_OSL=ON -D WITH_LLVM=ON -D LLVM_VERSION=6.0.0 -D OSL_ROOT_DIR=/opt/lib/osl -D WITH_OPENSUBDIV=ON -D OPENSUBDIV_ROOT_DIR=/opt/lib/osd -D WITH_OPENVDB=ON -D WITH_OPENVDB_BLOSC=ON -D OPENVDB_ROOT_DIR=/opt/lib/openvdb -D BLOSC_ROOT_DIR=/opt/lib/blosc -D WITH_ALEMBIC=ON -D ALEMBIC_ROOT_DIR=/opt/lib/alembic -D WITH_USD=ON -D USD_ROOT_DIR=/opt/lib/usd -D WITH_CODEC_FFMPEG=ON -D FFMPEG_LIBRARIES='avformat;avcodec;avutil;avdevice;swscale;swresample;lzma;rt;theora;theoradec;theoraenc;vorbis;vorbisenc;vorbisfile;ogg;x264;openjp2' -D WITH_XR_OPENXR=ON -D XR_OPENXR_SDK_ROOT_DIR=/opt/lib/xr-openxr-sdk .
