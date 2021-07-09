@@ -558,3 +558,6 @@ Makefile:155: recipe for target 'all' failed
 make: *** [all] Error 2
 ERROR! OpenShadingLanguage-1.11.10.0 failed to compile, exiting
 ```
+```
+sudo apt install libclang-7-dev
+```
