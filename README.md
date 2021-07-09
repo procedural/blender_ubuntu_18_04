@@ -353,3 +353,71 @@ Makefile:145: recipe for target 'all' failed
 make: *** [all] Error 2
 ERROR! OpenColorIO-2.0.0 failed to compile, exiting
 ```
+```
+Unpacking OpenShadingLanguage-1.11.10.0
+ILMBASE_HOME=/opt/lib/openexr
+-- The CXX compiler identification is GNU 7.5.0
+-- The C compiler identification is GNU 7.5.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Building OSL 1.11.10.0
+-- CMake version is 3.20.5
+-- Configuring OSL 1.11.10.0
+-- CMake 3.20.5
+-- CMake system           = Linux-5.4.0-42-generic
+-- CMake system name      = Linux
+-- Project source dir     = /home/constantine/src/blender-deps/OpenShadingLanguage-1.11.10.0
+-- Project build dir      = /home/constantine/src/blender-deps/OpenShadingLanguage-1.11.10.0/build
+-- Project install prefix = /opt/lib/osl-1.11
+-- Configuration types    = 
+-- Build type             = Release
+-- Setting Namespace to: OSL_v1_11
+-- CMAKE_CXX_COMPILER     = /usr/bin/c++
+-- CMAKE_CXX_COMPILER_ID  = GNU
+-- Building for C++14
+-- Compiling with SIMD level sse2
+-- clang-format found: /usr/bin/clang-format
+-- 
+-- * Checking for dependencies...
+-- *   - Missing a dependency 'Package'?
+-- *     Try cmake -DPackage_ROOT=path or set environment var Package_ROOT=path
+-- *     For many dependencies, we supply src/build-scripts/build_Package.bash
+-- *   - To exclude an optional dependency (even if found),
+-- *     -DUSE_Package=OFF or set environment var USE_Package=OFF 
+-- 
+-- CMAKE_PREFIX_PATH = /home/constantine/src/blender-deps/OpenShadingLanguage-1.11.10.0/ext/dist
+-- Found Boost 107300 
+-- Found ZLIB 1.2.11 
+-- Could NOT find Imath (missing: Imath_DIR)
+-- Could NOT find IlmBase (missing: IlmBase_DIR)
+-- Could NOT find OpenEXR (missing: OpenEXR_DIR)
+-- Found OpenEXR 2.2.0 
+-- Found OpenImageIO 2.1.15.0 
+-- Could NOT find pugixml (missing: pugixml_DIR)
+-- Found pugixml 1.8 
+-- LLVM 6.0.0 is outside the required range 7.0... 
+-- LLVM library not found 
+--     Try setting LLVM_ROOT ? 
+--     Maybe this will help:  src/build-scripts/build_llvm.bash 
+CMake Error at src/cmake/checked_find_package.cmake:148 (message):
+  LLVM is required, aborting.
+Call Stack (most recent call first):
+  src/cmake/externalpackages.cmake:117 (checked_find_package)
+  CMakeLists.txt:139 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/constantine/src/blender-deps/OpenShadingLanguage-1.11.10.0/build/CMakeFiles/CMakeOutput.log".
+See also "/home/constantine/src/blender-deps/OpenShadingLanguage-1.11.10.0/build/CMakeFiles/CMakeError.log".
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'clean'.  Stop.
+ERROR! OpenShadingLanguage-1.11.10.0 failed to compile, exiting
+```
