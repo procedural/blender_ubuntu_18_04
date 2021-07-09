@@ -353,6 +353,7 @@ Makefile:145: recipe for target 'all' failed
 make: *** [all] Error 2
 ERROR! OpenColorIO-2.0.0 failed to compile, exiting
 ```
+NOTE: OpenColorIO replaces its folder on compile command run, try to patch `OCIOYaml.cpp` in time.
 ```diff
 diff --git a/src/OpenColorIO/OCIOYaml.cpp b/src/OpenColorIO/OCIOYaml.cpp
 index 2cf64df..5f0ca66 100644
