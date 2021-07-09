@@ -11,6 +11,7 @@ Target: x86_64-pc-linux-gnu
 Thread model: posix
 InstalledDir: /usr/bin
 ```
+https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu
 ```
 [100%] Linking CXX executable ../../bin/blender
 /tmp/blender-git/lib/linux_centos7_x86_64/openvdb/lib/libopenvdb.a(Grid.cc.o): In function `openvdb::v8_0::GridBase::createGrid(std::string const&)':
